@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Alumno</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./alumno.css">
+    <link rel="shortcut icon" href="./Imagenes/9025976_robot_icon.ico" type="image/x-icon">
+
+    <script type="text/javascript">
+
+
+        
+        function cancelarClases(nroBoton) {
+            //Evento de boton "Cancelar Clase"
+            boton = document.getElementById('btnCancelar'+nroBoton)
+            boton.disabled = true;
+            boton.textContent = "Solicitud enviada"
+
+            alert("Se ha enviado una solicitud para cancelar su siguiente clase")
+
+        }
+        function capitalize(word) {
+            //Describe a la palabra word con su inicial como mayúscula.
+            firstChar = word.charAt(0).toUpperCase();
+            endWord = word.slice(1);
+            return (firstChar + endWord)
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html?user=agustina">
+                    <img src="./Imagenes/Roboticar.png" alt="Logo de Robotic.AR" title="Enlace al home." width="150px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Horarios">Horarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Avisos">Avisos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Cursos">Cursos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Alumno
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>Proximamente acciones</li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="./index.html">Salir -></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <h1 id="textoBienvenida"></h1>
+    </div>
+
+    <section class="asignaturasAlumno" id="Horarios">
+       
+        <h2>Horarios asignados</h2>
+        <br>
+        <table class="table table-hover" id="horariosAlumno">
+            <thead>
+                <tr>
+                    <th>Nombre de Asignatura</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Docente</th>
+                    <th>Observaciones</th>
+                    <th>Cancelar siguiente clase</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Introducción a robótica</td>
+                    <td>Lunes y martes</td>
+                    <td>13-15 hs</td>
+                    <td>Rodrigo Cianciulli</td>
+                    <td>Clase virtual</td>
+                    <td><button class="btn btn-primary" type="submit" onclick="cancelarClases(1)" id="btnCancelar1">Cancelar Clase</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Diseño</td>
+                    <td>Jueves y viernes</td>
+                    <td>13-15 hs</td>
+                    <td>Rodrigo Cianciulli</td>
+                    <td>Jueves presencial,
+                        Viernes virtual
+                    </td>
+                    <td><button class="btn btn-primary" type="submit" onclick="cancelarClases(2)" id="btnCancelar2">Cancelar Clase</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <hr>
+    <section class="Avisos" id="Avisos">
+        <h2>Avisos</h2>
+        <article class="avisos">
+            <p>No hay avisos para las siguientes clases.</p>
+        </article>
+    </section>
+    <hr>
+    <section class="solicitudCursos" id="Cursos">
+        <h2>
+            Podés asistir a una de nuestras charlas completando el formulario.
+        </h2>
+        <p>Todas nuestras charlas se realizan los dias miércoles, y tenemos una por cada turno para que puedas elegir la
+            opción que se acomode mejor a tus tiempos.</p>
+        <form class="formularioCharlas" id="formularioCharlas">
+            <div class="form-group">
+                <label for="txtMail">Email del alumno/a</label>
+                <input type="email" class="form-control" id="txtMail" placeholder="name@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="cboTemas">Tema de la charla</label>
+                <select class="form-control" id="cboTemas">
+                    <option>Inteligencia artificial</option>
+                    <option>Experiencias de profesionales</option>
+                    <option>El futuro de la robótica</option>
+                    <option>Insersión laboral</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cboTurnos">Horario a elegir</label>
+                <select class="form-control" id="cboTurnos">
+                    <option>Turno mañana: 10:00hs</option>
+                    <option>Turno tarde: 15:00hs</option>
+                    <option>Turno noche: 19:00hs</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Observaciones:</label>
+                <input class="form-control" type="text" placeholder="Charla presencial"
+                    aria-label="Disabled input example" disabled>
+            </div>
+            <button type="submit" class="btn btn-primary" id="charlaSubmit" onclick="verificarDatos()">Reservar
+                cupo</button>
+        </form>
+
+    </section>
+    <footer>
+        <hr>
+        <small>
+            <ul>
+                <li>
+                    <strong>Gonzalvez Victor</strong>
+                </li>
+                <li>
+                    <a href="mailto:victorricardo.gonzalvezchara@estudiantes.unahur.edu.ar">E-Mail</a>
+                </li>
+            </ul>
+        </small>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script>
+        function verificarDatos() {
+            //Indica al usuario que debe verificar los datos si no se completó el formulario correctamente.
+            var emailField = document.getElementById('txtMail');
+            var validEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+            if (!(validEmail.test(emailField.value))) {
+                alert('Verifique los datos del formulario');
+            }
+        }
+        document.getElementById("formularioCharlas").addEventListener("submit", function (event) {
+            event.preventDefault();
+            alert("Asistencia reservada correctamente")
+        });
+    </script>
+
+</body>
+
+</html>

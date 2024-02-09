@@ -1,0 +1,76 @@
+body {
+    background-color: #B0A695;
+}
+
+header,
+.navbar {
+    background-color: initial;
+    background-color: #B0A695;
+}
+
+.solicitudCursos {
+
+    margin: auto;
+    text-align: center;
+}
+
+.solicitudCursos form {
+    background-color: #F3EEEA;
+    padding: 10px;
+
+}
+
+.asignaturasAlumno {
+    margin: auto;
+    width: 70%;
+    align-items: center;
+    text-align: center;
+}
+
+.asignaturasAlumno table {
+    background-color: #F3EEEA;
+}
+
+#textoBienvenida {
+    border-top: solid;
+    text-decoration: underline;
+    text-align: center;
+    background-color: #F3EEEA;
+}
+
+ul {
+    list-style-type: none;
+}
+
+summary {
+    text-decoration: underline;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.formularioCharlas {
+    text-align: left;
+    width: 70%;
+    margin: auto;
+}
+
+@media only screen and (max-width:767px) {
+    body {
+        min-width: 581px;
+    }
+
+    .asignaturasAlumno {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.Avisos .avisos {
+    height: auto;
+    background-color: #F3EEEA;
+
+}
+
+.Avisos {
+    text-align: center;
+}

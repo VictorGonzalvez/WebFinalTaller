@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Docentes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./docente.css">
+    <link rel="shortcut icon" href="./Imagenes/9025976_robot_icon.ico" type="image/x-icon">
+    <script type="text/javascript">
+
+
+        //Imprime el cartel de bienvenida al usuario
+        //Capturar la url y sus parametros
+        var urlParams = new URLSearchParams(window.location.search)
+        //Obtener el dato usuario de la Url
+        var userName = urlParams.get('usuario')
+        userName = capitalize(userName)
+        //Insertar el texto de bienvenida con el nombre del usuario.
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('textoBienvenida').textContent = "Bienvenido/a docente " + userName;
+        })
+        function capitalize(word) {
+            //Describe a la palabra word con su inicial como mayúscula.
+            firstChar = word.charAt(0).toUpperCase();
+            endWord = word.slice(1);
+            return (firstChar + endWord)
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html?user=rodrigo">
+                    <img src="./Imagenes/Roboticar.png" alt="Logo Robotic.AR" title="Enlace al home" width="150px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Docente
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>Proximamente acciones</li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="./index.html">Salir -></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Cronograma
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#lunes">Lunes</a></li>
+                                <li><a class="dropdown-item" href="#martes">Martes</a></li>
+                                <li><a class="dropdown-item" href="#miercoles">Miércoles</a></li>
+                                <li><a class="dropdown-item" href="#jueves">Jueves</a></li>
+                                <li><a class="dropdown-item" href="#viernes">Viernes</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <h1 id="textoBienvenida"></h1>
+    </div>
+    <section>
+        <h2>Este es su cronograma de clases de la semana:</h2>
+        <article id="lunes">
+            <h3>Lunes</h3>
+            <div class="gridTableClases">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Introducción a robótica.</h5>
+                        <p class="card-text">Comisión 5. Turno tarde 13-15hs Virtual</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Electrónica</h5>
+                        <p class="card-text">Comisión 3. Turno tarde 15-17hs Virtual</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article id="martes">
+            <h3>Martes</h3>
+            <div class="gridTableClases">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Introducción a robótica.</h5>
+                        <p class="card-text">Comisión 5. Turno tarde 13-15hs Virtual</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article id="miercoles">
+            <h3>Miércoles</h3>
+            <div class="gridTableClases">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Inteligencia artificial</h5>
+                        <p class="card-text">Charla presencial. Turno mañana 10hs</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">El futuro de la robótica</h5>
+                        <p class="card-text">Charla presencial. Turno tarde 15hs</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article id="jueves">
+            <h3>Jueves</h3>
+            <div class="gridTableClases">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Diseño</h5>
+                        <p class="card-text">Comisión 1. Turno tarde 13-15hs Presencial. </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Electrónica</h5>
+                        <p class="card-text">Comisión 3. Turno tarde 15-17hs Presencial.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article id="viernes">
+            <h3>Viernes</h3>
+            <div class="gridTableClases">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Diseño</h5>
+                        <p class="card-text">Comisión 1. Turno tarde 13-15hs Virtual.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Diseño</h5>
+                        <p class="card-text">Comisión 2. Turno tarde 15-17hs Virtual.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Aprendizaje automático.</h5>
+                        <p class="card-text">Comisión 1. Turno noche 18-21hs Virtual.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <hr>
+        <small>
+            <ul>
+                <li>
+                    <strong>Gonzalvez Victor</strong>
+                </li>
+                <li>
+                    <a href="mailto:victorricardo.gonzalvezchara@estudiantes.unahur.edu.ar">E-Mail</a>
+                </li>
+            </ul>
+        </small>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

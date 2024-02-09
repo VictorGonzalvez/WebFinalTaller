@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Robotic.AR</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./index.css">
+    <link rel="shortcut icon" href="./Imagenes/9025976_robot_icon.ico" type="image/x-icon">
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./Imagenes/Roboticar.png" alt="Robotic.AR logo" width="150px" title="Enlace al home">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#acercaDe">Program-AR</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#porqueRobotica">¿Por qué robótica?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experiencia">Experiencia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#herramientas">Herramientas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cursos">Cursos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" onclick="redireccionarCampusOForm()" title="Ir al campus virtual">Campus</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="homeImage_Login">
+
+        <img src="./Imagenes/descarga.jpg" alt="Brazo robotico con brazo humano." class="homeImage">
+        <!-- Zona de Login de usuario -->
+        <form id="LoginForm">
+            <h2 id="loginTitle">Ingreso <br>alumnos <br>docentes</h2>
+            <div class="form-group" >
+                <label for="inputUser" id="inputFormulario">Usuario</label>
+                <input type="text" class="form-control" id="inputUser" aria-describedby="emailHelp"
+                    placeholder="Ingrese su usuario" required>
+            </div>
+            <div class="form-group" >
+                <label for="inputPassword" id="inputFormulario2">Contraseña</label>
+                <input type="password" class="form-control" id="inputPassword" placeholder="Ingrese su contraseña"
+                    required>
+            </div>
+            <button type="submit" class="btn btn-primary" id="loginButton">Ingresar</button>
+            <button type="button" onclick="cerrarSesion()" class="btn btn-primary" id="btnCerrarSesion">Cerrar sesión</button>
+        </form>
+    </section>
+    <section id="informacionRoboticAR">
+        <article id="acercaDe">
+            <h2> Acerca de nosotros</h2>
+            <div class="articleDescription">
+                <img src="./Imagenes/robotica-educativa.jpg" class="articleIMG" alt="niños aprendiendo">
+                <p>Somos un centro educativo especializado en robótica, orientado hacia
+                    niños/adolescentes entre 5 y 17 años. Nuestros cursos están enfocados en el equilibrio entre el
+                    juego y el aprendizaje para captar una mejor atención de los alumnos.</p>
+            </div>
+        </article>
+        <article id="porqueRobotica">
+            <h2>¿Por qué robótica?</h2>
+            <div class="articleDescription">
+                <img src="./Imagenes/robotica-educativa2.jpg" class="articleIMG" alt="pequeño robot">
+                <p>Porque en esta actividad confluyen las más diversas ramas de la <em>ciencia</em> y <em>la técnica</em>, por lo que se
+                    la puede considerar como una privilegiada puerta de acceso al conjunto de los conocimientos
+                    tecnológicos para el futuro.</p>
+            </div>
+        </article>
+        <article id="experiencia">
+            <h2>Experiencia</h2>
+            <div class="articleDescription">
+                <img src="./Imagenes/robotica._jujuy.jpeg" class="articleIMG" alt="salon de clases con alumnos">
+                <p>Contamos con cursos especializados para cada tipo de alumnos, desde aquel que recién inicia en el
+                    mundo de la robótica y no posee conocimientos previos, como también para aquel que desee
+                    perfeccionarse o ampliar aún mas sus conocimientos.</p>
+            </div>
+        </article>
+        <article id="herramientas">
+            <h2>Herramientas</h2>
+            <div class="articleDescription">
+                <img src="./Imagenes/robot-de-herramientas.jpg" class="articleIMG" alt="robot con herramienta">
+                <p>Para la realización de nuestros cursos de manera presencial <strong>no es necesario</strong> que cuentes con ningun
+                    tipo de herramienta, en nuestro centro educativo nos encargamos de que no te falte nada y puedas
+                    realizar cualquiera de los cursos sin ninguna preocupación.
+                </p>
+            </div>
+        </article>
+        <article id="cursos">
+            <h2>¿Con qué cursos contamos?</h2>
+            <div class="articleDescription">
+                <img src="./Imagenes/robot-pensando.jpg" class="articleIMG" alt="robot pensando">
+                <ul>
+                    <li>Cursos de <span class="underlinedText">diseño y modelado de robots.</span></li>
+                    <li>Cursos de <span class="underlinedText">fabricación y programación de robots.</span></li>
+                    <li>Cursos sobre la <span class="underlinedText">influencia de los robots</span> en la vida diaria.</li>
+                    <li>Cursos enfocados a <span class="underlinedText">electrónica y circuitos.</span></li>
+                    <li>Cursos de  <span class="underlinedText">Inteligencia artificial.</span></li>
+                </ul>
+            </div>
+        </article>
+
+    </section>
+    <aside>
+        <h2>Algunas noticias</h2>
+        <div>
+            <figure>
+                <img src="./Imagenes/figCap1.jpg" alt="concursantes misioneros del Mundial de Robótica(Noticia)">
+                <figcaption>
+                    <a href="https://canal12misiones.com/noticias-de-misiones/sociedad/olimpiada-mundial-de-robotica-el-talento-misionero-se-presenta-en-panama"
+                        target="_blank" title="Olimpiada Mundial de Robótica: el talento misionero se presenta en Panamá.">
+                        Olimpiada Mundial de Robótica: el talento misionero se presenta en Panamá.
+                    </a>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="./Imagenes/figCap2.jpg" alt="Mendocinos subcampeones del Mundial de Robótica(Noticia)">
+                <figcaption>
+                    <a href="https://www.telam.com.ar/notas/202310/642922-mendocinos-argentina-subcampeones-mundiales-robotica.html"
+                        target="_blank" title="Mendocinos representaron a la Argentina y salieron subcampeones mundiales de robótica.">
+                        Mendocinos representaron a la Argentina y salieron subcampeones mundiales de robótica.
+                    </a>
+                </figcaption>
+            </figure>
+
+            <figure >
+                <img src="./Imagenes/figCap3.jpg" alt="Equipo femenino del mundiál de robótica(Noticia)">
+                <figcaption>
+                    <a href="https://www.clarin.com/sociedad/argentina-hizo-historia-gano-primera-vez-mundial-robotica-equipo-femenino_0_OulLhhjV2K.html"
+                        target="_blank" title="Argentina hizo historia: ganó por primera vez un mundial de robótica con un equipo femenino.">
+                        Argentina hizo historia: ganó por primera vez un mundial de robótica con un equipo femenino.
+                    </a>
+                </figcaption>
+            </figure>
+        </div>
+    </aside>
+    <footer>
+        <hr>
+        <small>
+            <ul>
+                <li>
+                    <strong>Gonzalvez Victor</strong>
+                </li>
+                <li>
+                    <a href="mailto:victorricardo.gonzalvezchara@estudiantes.unahur.edu.ar">E-Mail</a>
+                </li>
+            </ul>
+        </small>
+    </footer>
+
+    <!--Script de bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!--Script funcional de la página-->
+    <script>
+        //form con usuario activo
+        formularioSegunUsuario()
+        function formularioSegunUsuario(){
+            //Si hay un usuario activo, carga el formulario con sus controles desactivados y un boton para cerrar sesion.
+            if (hayUsuarioActivo()) {
+            const button = document.getElementById("loginButton")
+            const inputPassword = document.getElementById("inputPassword")
+            const inputUser = document.getElementById("inputUser")
+            const botonCerrarSesion = document.getElementById('btnCerrarSesion')
+            const inputUsertxt = document.getElementById('inputFormulario')
+            const inputPasswordtxt = document.getElementById('inputFormulario2')
+                form = document.getElementById('LoginForm')
+                loginTitle = document.getElementById('loginTitle')
+                loginTitle.textContent = 'Has iniciado sesion como ' + capitalize(usuarioActivo())
+                button.disabled = true;
+                button.style.display = 'none'
+                inputPassword.disabled = true;
+                inputPassword.style.display = 'none'
+                inputPasswordtxt.style.display = 'none'
+                inputUser.disabled = true;
+                inputUser.style.display = 'none'
+                inputUsertxt.style.display = 'none'
+                botonCerrarSesion.style.display = 'revert';
+
+            }
+            
+        }
+        //Boton para iniciar sesion
+        function cerrarSesion(){
+            //Redirecciona al usuario a la pagina principal
+            window.location.href = './index.html'
+        }
+        document.getElementById("LoginForm").addEventListener("submit", function (event) {
+            var userName = document.getElementById('inputUser').value;
+            var password = document.getElementById('inputPassword').value;
+            event.preventDefault();
+            ComprobarLogin(userName, password)
+        });
+        function ComprobarLogin(userName, password) {
+            /*
+                Comprueba si los valores userName y password corresponden a algun usuario.
+            */
+            if (userName == 'agustina' && password == '123') {
+                var url = "./alumno.html?usuario=" + userName
+                window.location.href = url
+
+            }
+            else if (userName === "rodrigo" && password === "123") {
+                var url = "./docente.html?usuario=" + userName
+                window.location.href = url
+            }
+            else {
+                alert("Usuario incorrecto")
+            }
+        }
+        function hayUsuarioActivo() {
+            //Indica si hay algun usuario activo en la página.
+            userName = usuarioActivo()
+            return (
+                userName == 'agustina' || userName == 'rodrigo'
+            )
+        }
+        function usuarioActivo() {
+            // Describe al usuario que inició sesion
+            //Capturar la url y sus parametros
+            var urlParams = new URLSearchParams(window.location.search)
+            //Obtener el dato usuario de la Url
+            var userName = urlParams.get('user')
+            return (userName)
+        }
+        function redireccionarCampusOForm() {
+            /*
+                Decide si el usuario ya tiene una sesión iniciada y va a su campus o si debe completar el formulario de inicio de sesion.
+            */
+            if (hayUsuarioActivo()) {
+                console.log("Ir al campus")
+                var userName = usuarioActivo()
+                redireccionarSegunUser(userName)
+            }
+            else {
+                console.log("Completar Formulario")
+                alert("Complete el formulario de inicio de sesión")
+            }
+        }
+        function redireccionarSegunUser(usuario) {
+            //Redirecciona al usuario segun los datos ingresados en el formulario de inicio de sesión
+            if (usuario == 'agustina') {
+                var url = "./alumno.html?usuario=" + usuario
+                window.location.href = url
+            }
+            else if (usuario == 'rodrigo') {
+                var url = "./docente.html?usuario=" + usuario
+                window.location.href = url
+            }
+        }
+        function capitalize(word) {
+            // Describe a la palabra word con su inicial como Mayuscula
+            firstChar = word.charAt(0).toUpperCase();
+            endWord = word.slice(1);
+            return (firstChar + endWord)
+
+        }
+
+    </script>
+</body>
+
+</html>

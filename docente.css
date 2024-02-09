@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #B0A695;
+    min-width: 370px;
+}
+
+#textoBienvenida {
+    border-top: solid;
+    text-decoration: underline;
+    text-align: center;
+    background-color: #F3EEEA;
+}
+
+/*
+    Portada y login
+*/
+.homeImage_Login {
+    height: 50vh;
+    min-height: 350px;
+    max-height: 350px;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.homeImage {
+    width: 70%;
+}
+
+#LoginForm {
+    width: 30%;
+    background-color: #F3EEEA;
+    padding-left: 5px;
+}
+
+/*  Articulos  */
+
+
+.articleDescription {
+    display: flex;
+    align-items: center;
+}
+
+.articleDescription img {
+    width: 30%;
+    max-height: 150px;
+    min-height: 150px;
+
+    padding: 5px;
+}
+
+.btn {
+    background-color: #776B5D;
+    border-color: #776B5D;
+}
+
+.btn:hover {
+    background-color: #776B5D;
+    border-color: #776B5D;
+}
+
+footer {
+    text-align: center;
+    font-size: small;
+}
+
+/* Aside */
+aside {
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+aside div {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+figure {
+    overflow: hidden;
+    width: 30%;
+}
+
+a {
+    color: inherit;
+}
+
+a:visited {
+    color: currentColor;
+}
+
+.navbar-toggler-icon {
+    background-image: url(./Imagenes/MenuIcon.png);
+}
+
+a:hover {
+    color: inherit;
+}
+
+/* Materias del docente*/
+.gridTableClases{
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(300px, 1fr)
+    );
+    gap: 5px;
+    padding: 10px;
+}
+.card{
+    background-color: #EBE3D5;
+}
+h2{
+    text-decoration: underline dashed
+}
+article{
+    background-color: #F3EEEA;
+    margin: 10px;
+    border-radius: 10px;
+    border: solid;
+    min-width: 335px;
+    
+}

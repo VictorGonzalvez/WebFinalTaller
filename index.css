@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #B0A695;
+}
+#btnCerrarSesion{
+    display: none;
+}
+/*
+    Portada y login
+*/
+.homeImage_Login {
+    height: 50vh;
+    min-height: 350px;
+    max-height: 350px;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.homeImage {
+    width: 70%;
+}
+
+#LoginForm {
+    width: 30%;
+    background-color: #F3EEEA;
+    padding-left: 5px;
+}
+
+/*  Articulos  */
+article {
+    display: block;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    background-color: #EBE3D5;
+    min-height: 220px;
+    max-height: 220px;
+    overflow: auto;
+    margin-top: 10px;
+}
+.underlinedText{
+    text-decoration: underline;
+}
+
+.articleDescription {
+    display: flex;
+    align-items: center;
+}
+
+.articleDescription ul {
+    list-style-type: none;
+    align-items: end;
+    align-self: flex-end;
+    text-align: initial;
+    margin-left: 10px;
+}
+
+.articleIMG {
+    max-width: 260px;
+    min-width: 260px;
+    max-height: 150px;
+    min-height: 150px;
+    padding: 5px;
+}
+
+.btn {
+    background-color: #776B5D;
+    border-color: #776B5D;
+}
+
+.btn:hover {
+    background-color: #776B5D;
+    border-color: #776B5D;
+}
+
+footer {
+    text-align: center;
+    font-size: small;
+}
+
+/* Aside */
+aside {
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+aside div {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Escalado a celular */
+@media only screen and (max-width:870px) {
+    body {
+        min-width: 415px;
+    }
+
+    .homeImage_Login {
+        max-height: none;
+        display: block;
+        height: auto;
+    }
+
+    .homeImage {
+        width: 100%;
+    }
+
+    #LoginForm {
+        width: 100%;
+        padding-bottom: 5px;
+    }
+
+    article {
+        display: inline-table;
+        height: auto;
+        margin: 5px;
+    }
+
+    #informacionRoboticAR {
+        text-align: center;
+
+    }
+
+    .articleDescription {
+        display: block;
+    }
+
+    .articleDescription img {
+        width: 100%;
+    }
+
+    .articleDescription ul {
+        list-style-type: disc;
+        margin-left: 30px;
+    }
+}
+
+figure {
+    overflow: hidden;
+    width: 30%;
+}
+
+a {
+    color: inherit;
+}
+
+a:visited {
+    color: currentColor;
+}
+
+.navbar-toggler-icon {
+    background-image: url(./Imagenes/MenuIcon.png);
+}
+
+a:hover {
+    color: inherit;
+}
+
+nav div ul li:hover {
+    cursor: pointer;
+}
